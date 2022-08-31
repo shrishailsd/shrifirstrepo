@@ -3,118 +3,163 @@ var app = express();
 
 app.get("/url", (req, res, next) => {
     res.json({
-        "ResponseHeader": {
-            "ResponseDateTime": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-            "StatusCode": 0,
-            "StatusMessage": "SUCCESS"
+        "prefixes": {
+            "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+            "spi": "http://jazz.net/ns/ism/asset/smarter_physical_infrastructure#",
+            "oslc": "http://open-services.net/ns/core#"
         },
-        "TransactionInfoList": [{
-                "AgentId": 1094012,
-                "BeneficiaryFullName": "Moises Rivera",
-                "CanceledBy": 0,
-                "CanceledDateTime": null,
-                "ConfirmedBy": 0,
-                "ConfirmedDateTime": null,
-                "CountryFrom": null,
-                "CountryTo": null,
-                "CustomerExpCode": 0,
-                "CustomerTelNo": null,
-                "IsComplianceLegal": false,
-                "IsComplianceOps": false,
-                "IsHighValueCustomer": null,
-                "IsKrogerToKroger": false,
-                "IsOfflineCorresp": false,
-                "IsOnLegalHold": false,
-                "IsOnhold": false,
-                "IsPosted": false,
-                "IsReadyForPayAgent": false,
-                "IsResend": false,
-                "IsResendError": false,
-                "IsToCancel": false,
-                "OrderDate": "2022-08-02T09:51:29.060",
-                "OrderId": 1510911416,
-                "OrderNumber": null,
-                "OrderReferenceNumber": "12013788835",
-                "OrderStatus": "RECVD",
-                "PaidBy": 0,
-                "PaidDateTime": null,
-                "PayAgentId": 0,
-                "PayAgentLocID": 0,
-                "PayCurrency": null,
-                "PayoutAmount": {
-                    "Amount": 392,
-                    "CurrencyCode": "USD",
-                    "CurrencyDescription": "Dollars"
+        "oslc:responseInfo": {
+            "oslc:nextPage": {
+                "rdf:resource": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk?pageno=2&oslc.where=pluspcustomer.customer%3D%220010022960%22&oslc.pageSize=5&oslc.orderBy=-reportdate&oslc.select=ticketid%2Cclass%2Cstatus%2Csummary%2Creportdate%2Cdescription%2Cdescription_longdescription%2Cgbmserialnum%2Cpluspcustomer.customer%2Cpluspcustomer.name%2Ccommodity%2Ccommoditygroup%2Ccommodities.commodity%2Ccommodities.description%2Cpluspagreement%2Cticketuid%2Creportedbyname%2Creportedemail%2Creportedphone"
+            },
+            "totalPages": 66,
+            "oslc:totalCount": 327,
+            "pagenum": 1,
+            "rdf:about": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk?oslc.where=pluspcustomer.customer=%220010022960%22&oslc.pageSize=5&oslc.orderBy=-reportdate&oslc.select=ticketid,class,status,summary,reportdate,description,description_longdescription,gbmserialnum,pluspcustomer.customer,pluspcustomer.name,commodity,commoditygroup,commodities.commodity,commodities.description,pluspagreement,ticketuid,reportedbyname,reportedemail,reportedphone"
+        },
+        "rdfs:member": [{
+                "spi:ticketid": "IN1922986",
+                "spi:status": "INPROGL1",
+                "spi:class": "INCIDENT",
+                "spi:description": "Tivoli Monitoring - Problemas de lentitud",
+                "spi:reportedphone": "+50233128273",
+                "spi:pluspagreement": "8040001200",
+                "commodities": {
+                    "commodity": "2040208",
+                    "description": "TS-IT-PLATFORM-Support"
                 },
-                "PayoutCity": "San Salvador",
-                "PayoutState": "SS",
-                "RecAgentLocationId": 0,
-                "SendAmount": {
-                    "Amount": 392,
-                    "CurrencyCode": "USD",
-                    "CurrencyDescription": "Dollars"
+                "spi:reportedemail": "djnunez@tigo.com.g",
+                "spi:reportedbyname": "Dhixon Nuñez",
+                "spi:commodity": "2040208",
+                "pluspcustomer": {
+                    "name": "COMUNICACIONES CELULARES S. A.",
+                    "customer": "0010022960"
                 },
-                "SendCurrency": null,
-                "SenderFullName": "Moises Rivera Bolanos  ",
-                "StatusTime": "2022-08-02T10:54:22.220",
-                "ToCancelbyDesc": null,
-                "VoidedBy": 0,
-                "VoidedDateTime": null
+                "rdf:about": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk/_SU5DSURFTlQvSU4xOTIyOTg2",
+                "_rowstamp": "2438804103",
+                "pluspcustomer_collectionref": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk/_SU5DSURFTlQvSU4xOTIyOTg2/pluspcustomer",
+                "spi:description_longdescription": "Problemas en plataforma Tivoli, presentamos lentitud<br />SW: Tivoli Monitoring<br />Version:x<br />Sistema operativo: Red Hat<br /><br /><div>Cto: Dhixon Nuñez</div><div>Tel: +50233128273</div><div>Correo: djnunez@tigo.com.gt</div><div><br /></div><!-- RICH TEXT -->",
+                "commodities_collectionref": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk/_SU5DSURFTlQvSU4xOTIyOTg2/commodities",
+                "spi:class_description": "Incident",
+                "spi:reportdate": "2022-08-29T14:37:58-05:00",
+                "spi:commoditygroup": "TECHSOLUT",
+                "spi:ticketuid": 3123058
             },
             {
-                "AgentId": 1094012,
-                "BeneficiaryFullName": "Hilda Rivera Bolanos",
-                "CanceledBy": 0,
-                "CanceledDateTime": null,
-                "ConfirmedBy": 0,
-                "ConfirmedDateTime": null,
-                "CountryFrom": null,
-                "CountryTo": null,
-                "CustomerExpCode": 0,
-                "CustomerTelNo": null,
-                "IsComplianceLegal": false,
-                "IsComplianceOps": false,
-                "IsHighValueCustomer": null,
-                "IsKrogerToKroger": false,
-                "IsOfflineCorresp": false,
-                "IsOnLegalHold": false,
-                "IsOnhold": false,
-                "IsPosted": false,
-                "IsReadyForPayAgent": false,
-                "IsResend": false,
-                "IsResendError": false,
-                "IsToCancel": false,
-                "OrderDate": "2022-07-17T08:30:36.663",
-                "OrderId": 1362370816,
-                "OrderNumber": null,
-                "OrderReferenceNumber": "5100015140040",
-                "OrderStatus": "RECVD",
-                "PaidBy": 0,
-                "PaidDateTime": null,
-                "PayAgentId": 0,
-                "PayAgentLocID": 0,
-                "PayCurrency": null,
-                "PayoutAmount": {
-                    "Amount": 100,
-                    "CurrencyCode": "USD",
-                    "CurrencyDescription": "Dollars"
+                "spi:ticketid": "SR1200369",
+                "spi:status": "QUEUED",
+                "spi:class": "SR",
+                "spi:description": "Tivoli service desk ambiente de desarrollo no levanta base de datos",
+                "spi:reportedphone": "+50233124473",
+                "spi:pluspagreement": "8040001200",
+                "commodities": {
+                    "commodity": "2040208",
+                    "description": "TS-IT-PLATFORM-Support"
                 },
-                "PayoutCity": "San Salvador",
-                "PayoutState": "SS",
-                "RecAgentLocationId": 0,
-                "SendAmount": {
-                    "Amount": 100,
-                    "CurrencyCode": "USD",
-                    "CurrencyDescription": "Dollars"
+                "spi:reportedemail": "vjones@tigo.com.gt",
+                "spi:reportedbyname": "Virgil . Jones",
+                "spi:commodity": "2040208",
+                "pluspcustomer": {
+                    "name": "COMUNICACIONES CELULARES S. A.",
+                    "customer": "0010022960"
                 },
-                "SendCurrency": null,
-                "SenderFullName": "Moises Rivera Bolanos  ",
-                "StatusTime": "2022-07-18T14:32:35.000",
-                "ToCancelbyDesc": null,
-                "VoidedBy": 0,
-                "VoidedDateTime": null
+                "rdf:about": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk/_U1IvU1IxMjAwMzY5",
+                "_rowstamp": "2438817374",
+                "pluspcustomer_collectionref": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk/_U1IvU1IxMjAwMzY5/pluspcustomer",
+                "spi:description_longdescription": "<div>Tivoli service desk ambiente de desarrollo no levanta base de datos </div><div>contrato:  8040000584</div><div>+502-33124473 </div><div>correo: vjones@tigo.com.gt <br /></div><!-- RICH TEXT -->",
+                "commodities_collectionref": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk/_U1IvU1IxMjAwMzY5/commodities",
+                "spi:class_description": "Service Request",
+                "spi:reportdate": "2022-08-29T12:19:29-05:00",
+                "spi:commoditygroup": "TECHSOLUT",
+                "spi:ticketuid": 3121328
+            },
+            {
+                "spi:ticketid": "IN1887070",
+                "spi:status": "CANCELED",
+                "spi:class": "INCIDENT",
+                "spi:description": "Tivoli service desk ambiente de desarrollo no levanta base de datos",
+                "spi:reportedphone": "+50233124473",
+                "spi:pluspagreement": "8040001200",
+                "commodities": {
+                    "commodity": "2040208",
+                    "description": "TS-IT-PLATFORM-Support"
+                },
+                "spi:reportedemail": "vjones@tigo.com.gt",
+                "spi:reportedbyname": "Virgil . Jones",
+                "spi:commodity": "2040208",
+                "pluspcustomer": {
+                    "name": "COMUNICACIONES CELULARES S. A.",
+                    "customer": "0010022960"
+                },
+                "rdf:about": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk/_SU5DSURFTlQvSU4xODg3MDcw",
+                "_rowstamp": "2438538272",
+                "pluspcustomer_collectionref": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk/_SU5DSURFTlQvSU4xODg3MDcw/pluspcustomer",
+                "spi:description_longdescription": "<div>Tivoli service desk ambiente de desarrollo no levanta base de datos </div><div>contrato:  8040000584</div><div>+502-33124473 </div><div>correo: vjones@tigo.com.gt <br /></div><!-- RICH TEXT -->",
+                "commodities_collectionref": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk/_SU5DSURFTlQvSU4xODg3MDcw/commodities",
+                "spi:class_description": "Incident",
+                "spi:reportdate": "2022-08-26T17:54:13-05:00",
+                "spi:commoditygroup": "TECHSOLUT",
+                "spi:ticketuid": 3086881
+            },
+            {
+                "spi:ticketid": "IN1885400",
+                "spi:status": "RESOLVED",
+                "spi:class": "INCIDENT",
+                "spi:description": "Tivoli Monitoring - Problemas de lentitud",
+                "spi:reportedphone": "3312-4473.",
+                "spi:pluspagreement": "8040001200",
+                "commodities": {
+                    "commodity": "2040208",
+                    "description": "TS-IT-PLATFORM-Support"
+                },
+                "spi:reportedemail": "vjones@tigo.com.gt",
+                "spi:reportedbyname": "Virgil jones",
+                "spi:commodity": "2040208",
+                "pluspcustomer": {
+                    "name": "COMUNICACIONES CELULARES S. A.",
+                    "customer": "0010022960"
+                },
+                "rdf:about": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk/_SU5DSURFTlQvSU4xODg1NDAw",
+                "_rowstamp": "2433689704",
+                "pluspcustomer_collectionref": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk/_SU5DSURFTlQvSU4xODg1NDAw/pluspcustomer",
+                "spi:description_longdescription": "Problemas en plataforma Tivoli, presentamos lentitud  y los CPUs se encuentran excedidos<br />SW: Tivoli Monitoring<br />Version:x<br />Sistema operativo: Red Hat<br /><br />Telefono: 3312-4473<br />E-mail: vjones@tigo.com.gt<!-- RICH TEXT -->",
+                "commodities_collectionref": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk/_SU5DSURFTlQvSU4xODg1NDAw/commodities",
+                "spi:class_description": "Incident",
+                "spi:reportdate": "2022-08-25T15:59:55-05:00",
+                "spi:commoditygroup": "TECHSOLUT",
+                "spi:ticketuid": 3084936
+            },
+            {
+                "spi:ticketid": "SR1198230",
+                "spi:status": "INPROGL1",
+                "spi:class": "SR",
+                "spi:description": "IBM Software - Solicitud de informacion.",
+                "spi:reportedphone": "3227-2269",
+                "spi:pluspagreement": "8040001200",
+                "commodities": {
+                    "commodity": "2040208",
+                    "description": "TS-IT-PLATFORM-Support"
+                },
+                "spi:reportedemail": "jrojasm@tigo.com.gt",
+                "spi:reportedbyname": "John Rojas",
+                "spi:commodity": "2040208",
+                "pluspcustomer": {
+                    "name": "COMUNICACIONES CELULARES S. A.",
+                    "customer": "0010022960"
+                },
+                "rdf:about": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk/_U1IvU1IxMTk4MjMw",
+                "_rowstamp": "2420756031",
+                "pluspcustomer_collectionref": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk/_U1IvU1IxMTk4MjMw/pluspcustomer",
+                "spi:description_longdescription": "<div>Se requiere saber cual es la versión de Red Hat u Oracle Lnux en la que se puede instalar un &quot;Prove de FNMP TRAP&quot;</div><div> Contrato: 8040001200</div><div>SW; IBM JAZZ <br />Cto: John Rojas<br />Tel: 3227-2269<br />Correo: jrojasm@tigo.com.gt<br /></div><!-- RICH TEXT -->",
+                "commodities_collectionref": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk/_U1IvU1IxMTk4MjMw/commodities",
+                "spi:class_description": "Service Request",
+                "spi:reportdate": "2022-08-18T11:04:01-05:00",
+                "spi:commoditygroup": "TECHSOLUT",
+                "spi:ticketuid": 3080018
             }
-        ]
+        ],
+        "rdf:about": "https://controldesk.gbm.net/maxrest/oslc/os/mxwebexcctk"
     });
 });
 
