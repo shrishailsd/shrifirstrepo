@@ -4,7 +4,7 @@
   "description": "\"latest\"",
   "main": "runthistoTest.js",
   "scripts": {
-    "start": "node runthistoTest.js" 
+    "start": "node runthistoTest.js"
   },
   "author": "",
   "license": "ISC",
