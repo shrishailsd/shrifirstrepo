@@ -28,7 +28,7 @@ app.get("/url", (req, res, next) => {
                     "parameters": {
                         "employeeNumber": "135092"
                     },
-                    "reply": "<speak>The number you entered is <say-as interpret-as=\"characters\">135092</say-as>. Is this correct? If so, say yes or press 1. If not, say no, or press 2.</speak>",
+                    "reply": "<speak>The number you entered is <say-as interpret-as=characters>135092</say-as>. Is this correct? If so, say yes or press 1. If not, say no, or press 2.</speak>",
                     "timestamp": 1661452051215
                 },
                 "customer": {
