@@ -6,12 +6,7 @@ var app = express();
 
 
 app.get("/url", (req, res, next) => {
-    res.status(500).json({
-        "Code": 500,
-        "Description": "Card not Found",
-        "Id": -1,
-        "Module": "servicesparticipantcards"
-    });
+    res.status(500).json({ hi });
 
 
 });
