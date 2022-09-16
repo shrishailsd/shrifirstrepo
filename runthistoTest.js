@@ -10,7 +10,7 @@ app.get("/url", (req, res, next) => {
         "Code": 500,
         "Description": "Card not Found",
         "Id": -1,
-        "Module": "services/participant/cards"
+        "Module": "servicesparticipantcards"
     });
 
 
