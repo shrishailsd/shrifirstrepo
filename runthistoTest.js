@@ -6,7 +6,7 @@ var app = express();
 
 
 app.get("/url", (req, res, next) => {
-    res.status(500).json({
+    res.status(200).json({
         "AddressLine1": "3505 Fifth St",
         "AddressLine2": "APt 8",
         "BankAccountNumber": "",
