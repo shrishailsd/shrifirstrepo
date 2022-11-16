@@ -2,9 +2,6 @@ var express = require("express");
 var app = express();
 
 
-
-
-
 app.get("/url", (req, res, next) => {
     res.status(200).json({
         "AddressLine1": "3505 Fifth St",
@@ -36,7 +33,7 @@ app.get("/url", (req, res, next) => {
         "HighDeductableHealthPlanEligible": false,
         "HospitalCoverage": "",
         "LastName": "AYRES",
-        "LastUpdated": "/Date(1668610288050-0600)/",
+        "LastUpdated": "Date(1668610288050-0600)",
         "MaritalStatus": 0,
         "MedicalCoverage": "",
         "MedicareBeneficiary": 0,
