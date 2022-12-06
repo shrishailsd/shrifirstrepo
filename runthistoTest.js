@@ -4,81 +4,188 @@ var app = express();
 
 app.get("/url", (req, res, next) => {
     res.status(200).json({
-        "AddressLine1": "3505 Fifth St",
-        "AddressLine2": "APt 8",
-        "BankAccountNumber": "",
-        "BankAccountTypeCode": 0,
-        "BankName": "",
-        "BankRoutingNumber": "",
-        "BirthDate": "19610704",
-        "CardNumber": "1100800194873726",
-        "CardReimbAvail": false,
-        "City": "jackson height",
-        "Country": "US",
-        "DentalCoverage": "",
-        "DentalID": "",
-        "Division": "Division 1",
-        "DriverLicenceNumber": "",
-        "EligibilityDate": "20180717",
-        "Email": "sriram.ramanujam@gmail.com",
-        "EmployeeSSN": "184594822",
-        "EmployeeStatus": 2,
-        "EmployerName": "THE ABC TEST GROUP",
-        "EndStageRenalDisease": false,
-        "FirstName": "michael",
-        "Gender": 1,
-        "HealthPlanID": "",
-        "HealthcareCoverageDefault": "",
-        "HearingCoverage": "",
-        "HighDeductableHealthPlanEligible": false,
-        "HospitalCoverage": "",
-        "LastName": "AYRES",
-        "LastUpdated": "/Date(1668610288050-0600)/",
-        "MaritalStatus": 0,
-        "MedicalCoverage": "",
-        "MedicareBeneficiary": 0,
-        "MedicareID": "",
-        "MiddleInitial": "",
-        "MobileNumber": "",
-        "MotherMaidenName": "",
-        "PBMID": "",
-        "PersonCode": "",
-        "PharmacyCoverage": "",
-        "Phone": "423-424-6176",
-        "Prefix": "",
-        "ProcessingNotes": "",
-        "ReimbursementMethod": 1,
-        "ReimbursementMethodList": [{
-                "Description": "None",
-                "ReimbursementMethod": 0
+        "feed": {
+            "id": "https://my343994.crm.ondemand.com/sap/c4c/odata/v1/c4codataapi/CorporateAccountAddressCollection",
+            "title": {
+                "_type": "text",
+                "__text": "CorporateAccountAddressCollection"
             },
-            {
-                "Description": "Check",
-                "ReimbursementMethod": 1
+            "updated": "2022-12-06T19:30:39Z",
+            "author": {
+                "name": ""
             },
-            {
-                "Description": "Direct Deposit",
-                "ReimbursementMethod": 2
-            }
-        ],
-        "Remarks": "",
-        "ShippingAddressCity": "",
-        "ShippingAddressCountry": "",
-        "ShippingAddressLine1": "",
-        "ShippingAddressLine2": "",
-        "ShippingAddressState": "",
-        "ShippingAddressZip": "",
-        "State": "NY",
-        "TerminationDate": "        ",
-        "UserDefinedField": "",
-        "VisionCoverage": "",
-        "VisionID": "",
-        "Zip": "11372",
-        "BankAcctValStatus": 0,
-        "BankAcctValStatusDesc": "",
-        "CarrierName": "",
-        "MedicalDed": 0,
-        "MedicalDedPtd": 0
+            "link": [{
+                "_href": "CorporateAccountAddressCollection",
+                "_rel": "self",
+                "_title": "CorporateAccountAddressCollection"
+            }],
+            "entry": {
+                "id": "https://my343994.crm.ondemand.com/sap/c4c/odata/v1/c4codataapi/CorporateAccountAddressCollection('000C2966A9E01EDAB2E9AB1D307DE3A7')",
+                "title": {
+                    "_type": "text",
+                    "__text": "CorporateAccountAddressCollection('000C2966A9E01EDAB2E9AB1D307DE3A7')"
+                },
+                "updated": "2022-12-06T19:30:39Z",
+                "category": {
+                    "_term": "c4codata.CorporateAccountAddress",
+                    "_scheme": "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+                },
+                "link": [{
+                        "_href": "CorporateAccountAddressCollection('000C2966A9E01EDAB2E9AB1D307DE3A7')",
+                        "_rel": "edit",
+                        "_title": "CorporateAccountAddress"
+                    },
+                    {
+                        "_href": "CorporateAccountAddressCollection('000C2966A9E01EDAB2E9AB1D307DE3A7')/CorporateAccount",
+                        "_rel": "http://schemas.microsoft.com/ado/2007/08/dataservices/related/CorporateAccount",
+                        "_type": "application/atom+xml;type=entry",
+                        "_title": "CorporateAccount"
+                    }
+                ],
+                "content": {
+                    "properties": {
+                        "ObjectID": {
+                            "__text": "000C2966A9E01EDAB2E9AB1D307DE3A7"
+                        },
+                        "ParentObjectID": {
+                            "text": "hello"
+                        },
+                        "AccountID": {
+                            "__text": "800000094"
+                        },
+                        "UUID": {
+                            "__text": "000C2966-A9E0-1EDA-B2E9-AB1D307DE3A7"
+                        },
+                        "MainIndicator": {
+                            "__text": "true"
+                        },
+                        "ShipTo": {
+                            "__text": "true"
+                        },
+                        "DefaultShipTo": {
+                            "__text": "true"
+                        },
+                        "BillTo": {
+                            "__text": "true"
+                        },
+                        "DefaultBillTo": {
+                            "__text": "true"
+                        },
+                        "FormattedPostalAddressDescription": {
+                            "__text": "10 IMATHIAS STR., GERAKAS / 15344 ATHENS / GR"
+                        },
+                        "FormattedAddressFirstLineDescription": {
+                            "__text": "CONTROL HELLAS AL.N. LYKOUDIS & SIA"
+                        },
+                        "FormattedAddressSecondLineDescription": {
+                            "__text": "10 IMATHIAS STR., GERAKAS"
+                        },
+                        "FormattedAddressThirdLineDescription": {
+                            "__text": "15344 ATHENS"
+                        },
+                        "FormattedAddressFourthLineDescription": {
+                            "__text": "Greece"
+                        },
+                        "FormattedPostalAddressFirstLineDescription": {
+                            "__text": "10 IMATHIAS STR., GERAKAS"
+                        },
+                        "FormattedPostalAddressSecondLineDescription": {
+                            "__text": "15344 ATHENS"
+                        },
+                        "FormattedPostalAddressThirdLineDescription": {
+                            "__text": "Greece"
+                        },
+                        "CountryCode": {
+                            "__text": "GR"
+                        },
+                        "CountryCodeText": {
+                            "__text": "Greece"
+                        },
+                        "StateCode": {},
+                        "StateCodeText": {},
+                        "CareOfName": {},
+                        "AddressLine1": {},
+                        "AddressLine2": {},
+                        "HouseNumber": {},
+                        "AdditionalHouseNumber": {},
+                        "Street": {
+                            "__text": "10 IMATHIAS STR., GERAKAS"
+                        },
+                        "AddressLine4": {},
+                        "AddressLine5": {},
+                        "District": {},
+                        "City": {
+                            "__text": "ATHENS"
+                        },
+                        "DifferentCity": {},
+                        "StreetPostalCode": {
+                            "__text": "15344"
+                        },
+                        "County": {},
+                        "CompanyPostalCode": {},
+                        "POBoxIndicator": {
+                            "__text": "false"
+                        },
+                        "POBox": {},
+                        "POBoxPostalCode": {},
+                        "POBoxDeviatingCountryCode": {},
+                        "POBoxDeviatingCountryCodeText": {},
+                        "POBoxDeviatingStateCode": {},
+                        "POBoxDeviatingStateCodeText": {},
+                        "POBoxDeviatingCity": {},
+                        "TimeZoneCode": {
+                            "__text": "EET"
+                        },
+                        "TimeZoneCodeText": {
+                            "__text": "(UTC+02:00) Eastern European"
+                        },
+                        "Latitude": {
+                            "__text": "0.00000000000000"
+                        },
+                        "Longitude": {
+                            "__text": "0.00000000000000"
+                        },
+                        "Building": {},
+                        "Floor": {},
+                        "Room": {},
+                        "Phone": {
+                            "__text": "+30 2106047715"
+                        },
+                        "NormalisedPhone": {
+                            "__text": "+302106047715"
+                        },
+                        "Mobile": {},
+                        "NormalisedMobile": {},
+                        "Fax": {
+                            "__text": "+30 2106047714"
+                        },
+                        "Email": {
+                            "__text": "info@controlhellas.gr"
+                        },
+                        "WebSite": {
+                            "__text": "www.controlhellas.gr"
+                        },
+                        "LanguageCode": {
+                            "__text": "EN"
+                        },
+                        "LanguageCodeText": {
+                            "__text": "English"
+                        },
+                        "BestReachedByCode": {},
+                        "BestReachedByCodeText": {},
+                        "ETag": {
+                            "__text": "2022-03-17T11:49:07.1765380Z"
+                        }
+                    },
+                    "_type": "application/xml"
+                },
+                "_m:etag": "W/\"datetimeoffset'2022-03-17T11%3A49%3A07.1765380Z'\""
+            },
+            "_xmlns": "http://www.w3.org/2005/Atom",
+            "_xmlns:m": "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata",
+            "_xmlns:d": "http://schemas.microsoft.com/ado/2007/08/dataservices",
+            "_xml:base": "https://my343994.crm.ondemand.com/sap/c4c/odata/v1/c4codataapi/"
+        }
     });
 
 
