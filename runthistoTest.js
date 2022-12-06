@@ -5,7 +5,7 @@ var app = express();
 app.get("/url", (req, res, next) => {
     res.status(200).json({
         "feed": {
-            "id": "https://my343994.crm.ondemand.com/sap/c4c/odata/v1/c4codataapi/CorporateAccountAddressCollection",
+            "id": "h1ttps://my343994.crm.ondemand.com/sap/c4c/odata/v1/c4codataapi/CorporateAccountAddressCollection",
             "title": {
                 "_type": "text",
                 "__text": "CorporateAccountAddressCollection"
